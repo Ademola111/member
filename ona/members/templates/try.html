@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Testing ground
+{% endblock %}
+
+
+{% block content %}
+{{ my }}
+    {% for x in my %}
+        <h1>{{ x.id }} {{ x.firstname }} {{ x.lastname }} {{ x.phone }} {{ x.joined_date }}</h1>
+    {% endfor %}
+
+{% endblock %}

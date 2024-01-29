@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Django Tutorial
+{% endblock %}
+
+{% block content %}
+<div class="container-fluid mt-3 mb-3 ">
+    <div class="row">
+        <div class="col-md-12 text-center">
+            <h1> Welcome to Membership hub!</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <img src="../static/group.jpg" alt="members" class="img img-fluid m-3">
+            
+        </div>
+        <div class="col-md-6 text-center">
+            <h5 class="text-danger mt-3 mb-3">
+                <a href="/signup" class="signup">Sign Up</a>
+            </h5>
+        </div>
+        
+    </div>
+</div>
+{% endblock %}
+

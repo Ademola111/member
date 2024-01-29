@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block title %}
+All Members
+{% endblock %}
+
+{% block content %}
+<div class="mycard">
+    <h1>Members</h1>
+
+    <ul>
+        {% for x in mymember %}
+        {#{% for x in emptytestobject %}#}
+
+            {% if x.firstname == 'Emili' %}
+                <li><a href="details/{{x.id}}"> {{ x.firstname }} {{ x.lastname}}</a></li>
+            {% elif x.lastname == 'mikel' %}
+                <li><a href="details/{{x.id}}"> {{ x.firstname }} {{ x.lastname}}</a></li>
+            {% else %}
+                <li><a href="details/{{x.id}}"> {{ x.firstname }} {{ x.lastname}}</a></li>
+            {% endif %}
+        {% empty %}
+        <li>No members </li>
+        {% endfor %}
+
+    </ul>
+</div>
+{% endblock %}
